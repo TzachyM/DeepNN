@@ -48,10 +48,8 @@ def train_net(epochs, batch_size, criterion, optimizer, x_train, y_train, model)
         print(loss.item())
     writer.flush()
 
-       
-if __name__ == "__main__":
-    
     # Preproccing
+def preproccing():
     data = pd.read_csv(r"indian_liver_patient.csv")
     data['Gender'].replace([0,1],['Female','Male'],inplace=True)
     data['Dataset'].replace(2,0,inplace=True)
@@ -60,6 +58,10 @@ if __name__ == "__main__":
     in_features = len(data.columns)
     data = data.drop(['Dataset'], axis=1)
     data = np.array(pd.get_dummies(data))
+       
+if __name__ == "__main__":
+    
+    data, label, infeatures = preproccing()
     device = torch.device("cuda")
     net = NN(in_features).to(device)
     x_train, x_test, y_train, y_test = train_test_split(data, label, random_state=1, test_size=0.2)
