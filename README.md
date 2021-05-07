@@ -10,7 +10,7 @@ Building a deep convolutional GAN and running it with the MNIST dataset to gener
 Building a CNN and run the MNIST dataset on it.
 
 ## TL_cifar10_resnet.py
-Utilized CIFAR10 dataset, while taking only 8 classses out of 10 and analyzed it using Resnet18 and transfer learning while changing the net number of classes.
+Utilized CIFAR10 dataset, while taking only 8 classses out of 10 and analyzed it using Resnet18 and transfer learning while changing the net's number of classes.
 
 ## TL_tabular_data.py
 Utilized Indian Liver Patient Records dataset to examine the FC layer number impact by using transfer learning of FC layers and Tensorboard. 
